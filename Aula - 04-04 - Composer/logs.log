@@ -1,0 +1,5 @@
+[2025-04-04T12:43:05.260497+02:00] diario.WARNING: Foo [] []
+[2025-04-04T12:43:05.262460+02:00] diario.ERROR: Bar [] []
+[2025-04-04T13:06:28.826096+02:00] cadastroCliente.DEBUG: Informações do Cliente: Gabriel  - gk@test.com [] []
+[2025-04-04T13:37:14.103715+02:00] system.INFO: Informaçãoes: {"nome":"Gabriel Kaicon BH","email":"gk@test.com"} [] []
+[2025-04-04T13:40:48.298911+02:00] system.INFO: Informaçãoes de : {"nome":"Gabriel Kaicon BH","email":"gk1@test.com"} [] []

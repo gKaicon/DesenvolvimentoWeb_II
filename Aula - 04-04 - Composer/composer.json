@@ -1,0 +1,8 @@
+{
+    "name": "aula/composer",
+    "description": "Aula de Composer",
+    "type": "project",
+    "require": {
+        "monolog/monolog": "^3.9"
+    }
+}
