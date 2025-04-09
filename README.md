@@ -7,3 +7,4 @@
   * require - instalar dependencia no comando
   * upgrade -
   * remove - remover uma dependencia
+  * dump-autoload - gerar os arquivos necessários para fazer o autocarrregamento dos recursos do projeto

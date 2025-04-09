@@ -1,0 +1,14 @@
+{
+    "name": "aula/composer2",
+    "description": "Aula de Composer 2",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "\\App\\": "./src/"
+        }
+    },
+    "require": {
+        "bramus/router": "^1.6"
+    }
+}
