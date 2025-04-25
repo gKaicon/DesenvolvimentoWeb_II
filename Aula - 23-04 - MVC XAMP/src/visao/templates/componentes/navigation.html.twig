@@ -1,0 +1,42 @@
+<style>
+    nav {
+        background-color: #f8f9fa;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    nav li {
+        display: inline;
+        margin-right: 15px;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: #007bff;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+</style>
+<nav>
+    <ul>
+        <li>
+            <a href="{{ home }}">Home</a>
+        </li>
+        <li>
+            <a href="{{ home }}/clientes/listar">Clientes</a>
+        </li>
+        <li>
+            <a href="{{ home }}/clientes/digitar">Novo cliente</a>
+        </li>
+        <li>
+            <a href="{{ home }}/fornecedores/listar">Fornecedores</a>
+        </li>
+    </ul>
+</nav>

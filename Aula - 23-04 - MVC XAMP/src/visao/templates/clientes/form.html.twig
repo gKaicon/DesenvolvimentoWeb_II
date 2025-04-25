@@ -1,0 +1,25 @@
+{% extends "base.html.twig" %}
+
+{% block header %}
+{{ parent() }}
+<h1>Clientes</h1>
+{% endblock header %}
+
+{% block main %}
+<form action="{{ home }}/clientes/{{ acao }}" method="post">
+
+    <input type="hidden" name="id" value="{{ cliente.codigo }}">
+
+    <label for="nome">Nome</label>
+    <input type="text" name="nome" id="nome" value="{{ cliente.nome }}" required>
+    <br>
+    <label for="nome">CPF</label>
+    <input type="text" name="cpf" id="cpf" value="{{ cliente.cpf }}" required>
+    <br>
+    <label for="nome">Nome</label>
+    <input type="date" name="dt_nascimento" id="dt_nascimento" value="{{ cliente.dt_nascimento }}" required>
+    <br>
+
+    <button>Salvar</button>
+</form>
+{% endblock main %}

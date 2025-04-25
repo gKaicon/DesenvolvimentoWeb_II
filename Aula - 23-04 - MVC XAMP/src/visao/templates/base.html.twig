@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+{# Ajustar para a raiz do seu site #}
+{% set home = 'http://localhost/kaicon' %}
+<head>
+    <title>Sistema</title>
+    <link rel="stylesheet" href="{{home}}/public/css/geral.css">
+</head>
+
+<body>
+    <header>
+        {% block header %}
+        {% include 'componentes/navigation.html.twig' %}
+        {% endblock header %}
+    </header>
+    <main>
+        {% block main %}
+        <h1>Bem-vindo ao sistema!</h1>
+        {% endblock main %}
+    </main>
+    <footer>
+        {% block footer %}
+        <p>&copy; DEW II 2025</p>
+        {% endblock footer %}
+    </footer>
+</body>
+
+</html>
