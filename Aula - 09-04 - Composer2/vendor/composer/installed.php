@@ -3,7 +3,7 @@
         'name' => 'aula/composer2',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => '14fc0ad1451bf12cbacf2c35fc135acbe9b6fde3',
+        'reference' => '203df13a95034ea4c59c4cb229d72d3e9b8fb81e',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'aula/composer2' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '14fc0ad1451bf12cbacf2c35fc135acbe9b6fde3',
+            'reference' => '203df13a95034ea4c59c4cb229d72d3e9b8fb81e',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
