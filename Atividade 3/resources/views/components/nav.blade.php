@@ -7,10 +7,10 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="/">Adicionar</a>
+          <a class="nav-link" href="/produtos/criar">Adicionar</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/">Listagem</a>
+          <a class="nav-link" href="/produtos">Listagem</a>
         </li>
       </ul>
     </div>

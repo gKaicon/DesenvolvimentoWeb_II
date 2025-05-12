@@ -10,7 +10,6 @@
 	<body>
         @include ('components.nav')
         {{ $slot }}
-
 		@include ('components.footer')
 	</body>
 </html>
