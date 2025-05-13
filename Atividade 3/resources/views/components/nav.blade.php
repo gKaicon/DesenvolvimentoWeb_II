@@ -12,6 +12,9 @@
         <li class="nav-item">
           <a class="nav-link" href="/produtos">Listagem</a>
         </li>
+        <li class="teste-vite">
+          teste-vite
+        </li>
       </ul>
     </div>
   </div>
