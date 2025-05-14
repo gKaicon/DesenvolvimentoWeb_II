@@ -1,15 +1,5 @@
 <x-layout>
 	<x-slot:tituloPagina>{{ $tituloPagina }}</x-slot:tituloPagina>
-	<style>
-		button[type="submit"] {
-			background-color: #ff3737;
-			color: #fff;
-			padding: 10px 20px;
-			border: none;
-			border-radius: 5px;
-			cursor: pointer;
-		}
-	</style>
 	<div class="container">
 		<h1>{{ $tituloPagina }}</h1>
 		<form method="POST" action="/produtos/{{ isset($produto) ? 'atualizar' : 'armazenar' }}">
@@ -31,9 +21,9 @@
 			</div>
 			<div class="input-group mb-3">
 				<span class="input-group-text">Quantidade</span>
-				<input type="number" class="form-control" aria-label="qtd" placeholder="00.00" value="{{ $produto->quantidade ?? '' }}" id="quantidade" name="quantidade">
+				<input type="number" class="form-control" aria-label="qtd" placeholder="00" value="{{ $produto->quantidade ?? '' }}" id="quantidade" name="quantidade">
 			</div>
-			<button type="submit">{{ isset($produto) ? 'Salvar' : 'Criar' }}</button>
+			<button type="submit" class="btn btn-success">{{ isset($produto) ? 'Salvar' : 'Criar' }}</button>
 		</form>
 	</div>
 </x-layout>

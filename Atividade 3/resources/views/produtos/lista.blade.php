@@ -1,38 +1,15 @@
-<style>
-	table {
-		border-collapse: collapse;
-		border: 1px solid #ddd;
-		margin: 20px 10px;
-		width: 90%;
-	}
-
-	th,	td {
-		padding: 8px;
-		text-align: left;
-		border-bottom: 1px solid #ddd;
-	}
-
-	th {
-		background-color: #4CAF50;
-		color: white;
-	}
-
-	tr:nth-child(even) {
-		background-color: #f2f2f2;
-	}
-
-	.table {
-		display: flex;
-		justify-content: center;
-	}
-</style>
 <x-layout>
-    <x-slot:tituloPagina>{{ $tituloPagina }}</x-slot:tituloPagina>
-	@session('success')
-        {{ session('success') }}
+	<x-slot:tituloPagina>{{ $tituloPagina }}</x-slot:tituloPagina>
+    @session('success')
+        @if ( session('success'))
+        <script>
+            Swal.fire("{{ session('success') }}");
+        </script>
+        @endif
     @endsession
-	<div class="table">
-		@if ($produtos != null )
+	<div
+		class="table">
+		@if ($produtos != null)
             <table>
                 <thead>
                     <tr>
@@ -63,7 +40,7 @@
                                         text-align: center;
                                         text-decoration: none;
                                         display: inline-block;
-                                        font-size: 14px !important;                                       
+                                        font-size: 14px !important;
                                         cursor: pointer;
                                     }
                                 </style>
@@ -81,9 +58,13 @@
                         </tr>
                     @endforeach
                 </tbody>
+                <tfoot>
+                    <tr><td colspan="7"></td></tr>
+                </tfoot>
             </table>
         @else
             <p>Nenhum produto encontrado.</p>
         @endif
 	</div>
 </x-layout>
+
