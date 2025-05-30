@@ -14,17 +14,13 @@ class UserController extends Controller
 
     public function login(Request $request)
     {
-
         $credentials = $request->only('email', 'password');
-
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
             return redirect('/');
-
         }
         return back()->withErrors(['email' => 'Credenciais inválidas'])->onlyInput('email');
     }
-
 
     public function logout(Request $request)
     {
@@ -33,5 +29,4 @@ class UserController extends Controller
         $request->session()->regenerateToken();
         return redirect('/');
     }
-
 }

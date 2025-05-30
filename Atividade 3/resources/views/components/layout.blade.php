@@ -8,6 +8,7 @@
 		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 		<title>{{ $tituloPagina }}</title>
 		@vite(["resources/css/app.css"])
+		@vite(["resources/js/app.js"])
 	</head>
 	<body>
         @include ('components.nav')
