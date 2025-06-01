@@ -26,9 +26,4 @@ async function deleteFilm(req, res){
     res.status(200).json({message : "Registro: " + id + " removido"})
 }
 
-export {
-    createFilm,
-    listFilms,
-    updateFilm,
-    deleteFilm
-}
+export { createFilm, listFilms, updateFilm, deleteFilm };

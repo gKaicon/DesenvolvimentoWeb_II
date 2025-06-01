@@ -1,4 +1,5 @@
 import Actor from "../Models/actor.js";
+
 async function createActor(req, res) {
     const { first_name, last_name, birthDate, phoneNumber, email } = req.body;
     const newActor = await Actor.create({
@@ -13,7 +14,7 @@ async function listActors(req, res) {
 }
 
 async function updateActor(req, res){
-    const { first_name, last_name, birthDate, phoneNumber, email }  = req.body
+    const { first_name, last_name, birthDate, phoneNumber, email, id }  = req.body
     const updateActor = await Actor.update({ first_name, last_name, birthDate, phoneNumber, email } , {where: {id: id}})
     res.status(200).json(updateActor)
 }
@@ -24,9 +25,4 @@ async function deleteActor(req, res){
     res.status(200).json({message : "Registro: " + id + " removido"})
 }
 
-export {
-    createActor,
-    listActors,
-    updateActor,
-    deleteActor
-}
+export { createActor, listActors, updateActor, deleteActor };
