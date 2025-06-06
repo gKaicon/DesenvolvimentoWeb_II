@@ -2,6 +2,13 @@ import Film from "../Models/film.js";
 import Gender from "../Models/gender.js";
 
 async function createFilm(req, res) {
+    const actors = [];
+
+    for (let i = 0; i < req.body.actors.length; i++) {
+        const actor= await Actor.findByPk(req.body.actors[i]);
+        actors.push(actor);
+    }
+
     const newFilm = await Film.create({
         title: req.body.title,
         description: req.body.description,
@@ -12,7 +19,8 @@ async function createFilm(req, res) {
 }
 
 async function listFilms(req, res) {
-    const films = await Film.findAll();
+
+    const films = await Film.findAll({include: [Gender, Actor], raw: true});
     res.json(films);
 }
 
