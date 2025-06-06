@@ -1,10 +1,12 @@
 import Film from "../Models/film.js";
+import Gender from "../Models/gender.js";
 
 async function createFilm(req, res) {
     const newFilm = await Film.create({
         title: req.body.title,
         description: req.body.description,
-        release_year: req.body.release_year
+        release_year: req.body.release_year,
+        genderId: req.body.genderId
     });
     res.status(201).json(newFilm);
 }
