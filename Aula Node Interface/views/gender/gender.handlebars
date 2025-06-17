@@ -1,0 +1,51 @@
+<div class="container my-4">
+    <h1 class="mb-4">Gêneros</h1>
+
+    <form action="/gender/{{#if action }}update{{else}}create{{/if}}" method="post" class="mb-5">
+
+        <input type="hidden" name="id" value="{{gender_editing.id}}">
+
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <div class="input-group">
+                <span class="input-group-text" id="basic-addon1"></span>
+                <input autocomplete="off" type="text" class="form-control" id="name" name="name" value="{{gender_editing.name}}" required>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">{{#if action }}Salvar Alterações{{else}}Criar{{/if}}</button>
+    </form>
+
+    <hr class="my-5">
+
+    <h2 class="mb-3">Lista de Gêneros</h2>
+    <div class="table-responsive mb-5 mb-4">
+        <table class="table table-striped table-hover mb-4">
+            <thead>
+                <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Ações</th>
+                </tr>
+            </thead>
+            <tbody class="text-black">
+                {{#each genders}}
+                <tr>
+                    <td>{{this.dataValues.name}}</td>
+                    <td>
+                        <div class="d-flex justify-content-evenly">
+                            <form action="/gender/edit" method="post" class="me-2">
+                                <input type="hidden" name="id" value="{{this.dataValues.id}}">
+                                <button type="submit" class="btn btn-sm btn-outline-info">Edit</button>
+                            </form>
+                            <form action="/gender/delete" method="post">
+                                <input type="hidden" name="id" value="{{this.dataValues.id}}">
+                                <button type="submit" class="btn btn-sm btn-outline-danger">Del</button>
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>

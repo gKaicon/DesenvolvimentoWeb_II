@@ -1,4 +1,4 @@
-import { createGender, listGenders, updateGender, deleteGender } from '../Controller/gender_Controller.js'
+import { createGender, listGenders, updateGender, deleteGender } from '../../Controller/api/gender_Controller.js'
 import { Router } from 'express'
 
 const router = Router();

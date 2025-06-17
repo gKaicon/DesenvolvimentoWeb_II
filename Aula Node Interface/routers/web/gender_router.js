@@ -1,10 +1,10 @@
-import { createGender, listGenders, updateGender, deleteGender, showPage } from '../../Controller/web/gender_Controller.js'
+import { createGender, listGenders, updateGender, deleteGender, editGender } from '../../Controller/web/gender_Controller.js'
 import { Router } from 'express'
 
 const router = Router();
-router.get('/', showPage)
+router.get('/', listGenders)
 router.post('/create', createGender)
-router.get('/list', listGenders)
+router.post('/edit', editGender)
 router.post('/update', updateGender)
 router.post('/delete', deleteGender)
 

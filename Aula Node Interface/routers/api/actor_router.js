@@ -1,4 +1,4 @@
-import { createActor, listActors, updateActor, deleteActor } from '../Controller/actor_Controller.js'
+import { createActor, listActors, updateActor, deleteActor } from '../../Controller/api/actor_Controller.js'
 import { Router } from 'express'
 
 const router = Router();

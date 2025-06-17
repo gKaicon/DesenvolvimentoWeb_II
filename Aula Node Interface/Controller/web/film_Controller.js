@@ -17,30 +17,34 @@ async function createFilm(req, res) {
         genderId: req.body.genderId
     });
     await newFilm.addActors(actors);
-    res.status(201).json(newFilm);
+    res.render('alerts', { title: 'Films', body: 'Film created.' });
 }
 
-async function listFilms(req, res) {
-    const films = await Film.findAll({ include: [{ model: Gender, as: 'gender' }, Actor] });
-    res.json(films);
+async function listFilms(req, res) {    
+    const films = await Film.findAll({ include: [{ model: Gender, as: 'gender' }, Actor]});
+    const actors = await Actor.findAll();
+    const genders = await Gender.findAll();
+    res.render('film/film', { film: films, actor: actors, gender: genders });
+}
+
+async function editFilm(req, res) {
+    const film = await Film.findOne({ where: { id: req.body.id }, include: [{ model: Gender, as: 'gender' }, Actor] });
+    const films = await Film.findAll({ include: [{ model: Gender, as: 'gender' }, Actor]});
+    const genders = await Gender.findAll();
+    const actors = await Actor.findAll();
+    res.render('film/film', { action: 'edit', film_editing: film.dataValues, gender: genders, actor: actors, noRenderActors: 'true', film: films });
 }
 
 async function updateFilm(req, res) {
-
     const { title, description, release_year, id, genderId } = req.body
     const updateFilm = await Film.update({ title, description, release_year, genderId }, { where: { id: id } })
-    res.status(200).json(updateFilm)
+    res.render('alerts', { title: 'Films', body: 'Film edited.' });
 }
 
 async function deleteFilm(req, res) {
     const id = req.body.id
     await Film.destroy({ where: { id: id } })
-    res.status(200).json({ message: "Registro: " + id + " removido" })
+    res.render('alerts', { title: 'Films', body: 'Film '+ id +'deleted.' });
 }
 
-async function showPage(req, res) {
-    res.render('film/film');
-}
-
-
-export { createFilm, listFilms, updateFilm, deleteFilm, showPage };
+export { createFilm, listFilms, editFilm, updateFilm, deleteFilm};
