@@ -24,15 +24,15 @@
             <tbody class="text-black">
                 {{#each genders}}
                 <tr>
-                    <td>{{this.dataValues.name}}</td>
+                    <td>{{this.name}}</td>
                     <td>
                         <div class="d-flex justify-content-evenly">
                             <form action="/gender/edit" method="post" class="me-2">
-                                <input type="hidden" name="id" value="{{this.dataValues.id}}">
+                                <input type="hidden" name="id" value="{{this.id}}">
                                 <button type="submit" class="btn btn-sm btn-outline-info">Edit</button>
                             </form>
                             <form action="/gender/delete" method="post">
-                                <input type="hidden" name="id" value="{{this.dataValues.id}}">
+                                <input type="hidden" name="id" value="{{this.id}}">
                                 <button type="submit" class="btn btn-sm btn-outline-danger">Del</button>
                             </form>
                         </div>

@@ -15,7 +15,8 @@ async function listGenders(req, res) {
 
 async function editGender(req, res) {
     const gender = await Gender.findOne({ where: { id: req.body.id } });
-    res.render('gender/gender', { action: 'edit', gender_editing: gender.dataValues });
+    const genders = await Gender.findAll();
+    res.render('gender/gender', { action: 'edit', gender_editing: gender.dataValues, genders: genders });
 
 }
 
