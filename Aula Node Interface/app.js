@@ -28,8 +28,8 @@ const hbs = create({
         eq: function (v1, v2) {
             return v1 === v2;
         },
-        includesId: function (array, idToFind) {
-            
+        contains: function (array, idToFind) {
+            return typeof array !== 'undefined' && array.indexOf(idToFind) != -1;
         }
     }
 });
@@ -48,7 +48,7 @@ app.use('/film', film_router)
 app.use('/actor', actor_router)
 app.use('/gender', gender_router)
 
-app.use(express.static('resources'));
+app.use(express.static('public'));
 
 app.listen(80, () => {
     console.log('Servidor rodando...')
