@@ -2,7 +2,8 @@
   <nav class="navbar navbar-expand-lg bg-body-dark">
     <div class="container-fluid">
       <a class="navbar-brand text-white" href="#">Filme Mania</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end " id="navbarNav">
@@ -19,6 +20,27 @@
           <li class="nav-item">
             <a class="nav-link text-white" href="/gender">Gêneros</a>
           </li>
+
+          {{#if user}}
+          <li class="nav-item">
+            <a class="nav-link text-white" href="/user/logout">Sair</a>&nbsp;
+          </li>
+          {{else}}
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Usuários
+            </a>
+            <ul class="dropdown-menu" style="background-color: black;">
+              <li>
+                <a class="dropdown-item text-white" href="/user/login">Entrar</a>&nbsp;
+              </li>
+              <li>
+                <a class="dropdown-item text-white" href="/user/register">Registrar</a>&nbsp;
+              </li>
+            </ul>
+          </li>
+          {{/if}}
         </ul>
       </div>
     </div>

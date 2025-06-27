@@ -5,7 +5,7 @@ async function createGender(req, res) {
     const newGender = await Gender.create({
         name: req.body.name,
     });
-    res.render('alerts', { title: 'Gender', body: 'Gender created.' });
+    res.redirect('/gender');
 }
 
 async function listGenders(req, res) {
@@ -23,13 +23,13 @@ async function editGender(req, res) {
 async function updateGender(req, res) {
     const { name, id } = req.body;
     const updateGender = await Gender.update({ name }, { where: { id: id } });
-    res.render('alerts', { title: 'Gender', body: 'Gender edited.' });
+    res.redirect('/gender');
 }
 
 async function deleteGender(req, res) {
     const id = req.body.id;
     await Gender.destroy({ where: { id: id } });
-    res.render('alerts', { title: 'Gender', body: 'Gender' + id + ' deleted.' });
+    res.redirect('/gender');
 }
 
 export { createGender, editGender, listGenders, updateGender, deleteGender};
