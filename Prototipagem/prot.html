@@ -66,7 +66,8 @@
                 </style>
                 <table class="table table-striped table-hover">
                     <thead class="thead-dark">
-                        <div style="background-color: #492004;" class="text-white text-center fw-bold fs-4">Historico de Agendamentos</div>
+                        <div style="background-color: #492004;" class="text-white text-center fw-bold fs-4">Historico de
+                            Agendamentos</div>
                         <tr>
                             <th scope="col">#</th>
                             <th scope="col">Horário</th>
@@ -76,15 +77,67 @@
                             <th scope="col">Ações</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="PC">
                         <tr>
                             <th scope="row">1</th>
                             <td>2025-06-10 10:00</td>
-                            <td>João Fernandes</td>
+                            <td>José Fernandes</td>
                             <td>Corte Simples</td>
                             <td>Agendado</td>
                             <td>
-                                <button class="btn btn-sm btn-info text-white m-1 w-100">🗃️</button>
+                                <button class="btn btn-sm btn-warning text-white m-1 w-100">🗃️ - Comentário </button>
+                                <button class="btn btn-sm btn-info text-white m-1 w-100">✍🏽 - Editar Agendamento </button> 
+                                <button class="btn btn-sm btn-danger btn-excluir m-1 w-100">❌ - Cancelar Agendamento</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>2025-06-10 10:00</td>
+                            <td>João Fernandes</td>
+                            <td>Corte Simples</td>
+                            <td>Concluido</td>
+                            <td>
+                                <button class="btn btn-sm btn-warning text-white m-1 w-100">🗃️ - Comentário </button>
+                                <button class="btn btn-sm btn-info text-white m-1 w-100">✍🏽 - Editar Agendamento </button> 
+                                <button class="btn btn-sm btn-danger btn-excluir m-1 w-100">❌ - Cancelar Agendamento</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>2025-06-10 10:00</td>
+                            <td>João Fernandes</td>
+                            <td>Cancelado</td>
+                            <td>Agendado</td>
+                            <td>
+                                <button class="btn btn-sm btn-warning text-white m-1 w-100">🗃️ - Comentário </button>
+                                <button class="btn btn-sm btn-info text-white m-1 w-100">✍🏽 - Editar Agendamento </button> 
+                                <button class="btn btn-sm btn-danger btn-excluir m-1 w-100">❌ - Cancelar Agendamento</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>2025-06-10 10:00</td>
+                            <td>João Fernandes</td>
+                            <td>Corte Simples</td>
+                            <td>Concluido</td>
+                            <td>
+                                <button class="btn btn-sm btn-warning text-white m-1 w-100">🗃️ - Comentário </button>
+                                <button class="btn btn-sm btn-info text-white m-1 w-100">✍🏽 - Editar Agendamento </button> 
+                                <button class="btn btn-sm btn-danger btn-excluir m-1 w-100">❌ - Cancelar Agendamento</button>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                    <tbody class="d-none mobile">
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>2025-06-10 10:00</td>
+                            <td>José Fernandes</td>
+                            <td>Corte Simples</td>
+                            <td>Agendado</td>
+                            <td>
+                                <button class="btn btn-sm btn-warning text-white m-1 w-100">🗃️</button>
+                                <button class="btn btn-sm btn-info text-white m-1 w-100">✍🏽</button>
                                 <button class="btn btn-sm btn-danger btn-excluir m-1 w-100">❌</button>
                             </td>
                         </tr>
@@ -95,7 +148,8 @@
                             <td>Corte Simples</td>
                             <td>Concluido</td>
                             <td>
-                                <button class="btn btn-sm btn-info text-white m-1 w-100">🗃️</button>
+                                <button class="btn btn-sm btn-warning text-white m-1 w-100">🗃️</button>
+                                <button class="btn btn-sm btn-info text-white m-1 w-100">✍🏽</button>
                                 <button class="btn btn-sm btn-danger btn-excluir m-1 w-100">❌</button>
                             </td>
                         </tr>
@@ -106,7 +160,8 @@
                             <td>Cancelado</td>
                             <td>Agendado</td>
                             <td>
-                                <button class="btn btn-sm btn-info text-white m-1 w-100">🗃️</button>
+                                <button class="btn btn-sm btn-warning text-white m-1 w-100">🗃️</button>
+                                <button class="btn btn-sm btn-info text-white m-1 w-100">✍🏽</button>
                                 <button class="btn btn-sm btn-danger btn-excluir m-1 w-100">❌</button>
                             </td>
                         </tr>
@@ -117,11 +172,11 @@
                             <td>Corte Simples</td>
                             <td>Concluido</td>
                             <td>
-                                <button class="btn btn-sm btn-info text-white m-1 w-100">🗃️</button>
+                                <button class="btn btn-sm btn-warning text-white m-1 w-100">🗃️</button>
+                                <button class="btn btn-sm btn-info text-white m-1 w-100">✍🏽</button>
                                 <button class="btn btn-sm btn-danger btn-excluir m-1 w-100">❌</button>
                             </td>
                         </tr>
-                        
                     </tbody>
                 </table>
             </div>
@@ -161,4 +216,3 @@
 </body>
 
 </html>
-

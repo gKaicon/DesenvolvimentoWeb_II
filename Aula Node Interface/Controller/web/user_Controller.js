@@ -46,8 +46,6 @@ async function logout(req, res) {
     res.redirect('/user/login');
 }
 
-
-
 async function checkLogged(req, res, next) {
     if (req.session && req.session.user) {
         req.app.locals.user = req.session.user;
