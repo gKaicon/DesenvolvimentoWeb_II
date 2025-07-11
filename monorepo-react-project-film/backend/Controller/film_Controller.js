@@ -26,7 +26,7 @@ async function listFilms(req, res) {
 }
 
 async function updateFilm(req, res) {
-    const { title, description, release_year, id, genderId } = req.body
+    const { title, description, release_year, id, genderId, actors } = req.body
     const updateFilm = await Film.update({ title, description, release_year, genderId }, { where: { id: id } })
     res.status(200).json(updateFilm)
 }

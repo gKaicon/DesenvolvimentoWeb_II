@@ -1,8 +1,8 @@
-export default function List (props){
+export default function List(props) {
     return (
         <ul className="list-group">
             {
-                props.items.map((v, i)=>{
+                props.items.map((v, i) => {
                     return <li className="list-group-item">{v}</li>;
                 })
             }

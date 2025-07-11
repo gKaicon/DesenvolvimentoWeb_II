@@ -1,0 +1,9 @@
+body {
+    width: 100vw;
+    max-height: 100vh;
+    background-image: url('/imgs/bg-home.jpg');
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}

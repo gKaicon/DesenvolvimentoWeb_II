@@ -1,0 +1,7 @@
+/* components/list.module.css */
+.p {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    color: #a71515;
+    font-size: 19px;
+}
