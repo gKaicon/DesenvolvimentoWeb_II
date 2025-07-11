@@ -26,8 +26,17 @@ async function listFilms(req, res) {
 }
 
 async function updateFilm(req, res) {
-    const { title, description, release_year, id, genderId, actors } = req.body
+    const actors = [];
+
+    for (let i = 0; i < req.body.actors.length; i++) {
+        const actor = await Actor.findByPk(req.body.actors[i]);
+        actors.push(actor);
+    }
+
+    const { title, description, release_year, id, genderId } = req.body
     const updateFilm = await Film.update({ title, description, release_year, genderId }, { where: { id: id } })
+    const film_actor_editing = await Film.findOne({ where: { id: id } });
+    await film_actor_editing.setActors(actors);
     res.status(200).json(updateFilm)
 }
 

@@ -61,7 +61,7 @@ const Film = () => {
             setTitle(filmToEdit.title);
             setDescription(filmToEdit.description);
             setYear(filmToEdit.release_year);
-            setGenderId(filmToEdit.GenderId);
+            setGenderId(filmToEdit.genderId);
             // Marca os atores que participam do filme
             setAllActors(prevActors => prevActors.map(actor => ({
                 ...actor,

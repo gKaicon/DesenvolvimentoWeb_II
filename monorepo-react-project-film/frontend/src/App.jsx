@@ -11,11 +11,13 @@ function App() {
     <>
       <BrowserRouter>
         <Navigation />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/film" element={<Film />} />
-          <Route path="/about" element={<About />} />
-        </Routes>
+        <main style={{ minHeight: 'calc(100vh - 56px)' }}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/film" element={<Film />} />
+            <Route path="/about" element={<About />} />
+          </Routes>
+        </main>
         <Footer />
       </BrowserRouter>
     </>
